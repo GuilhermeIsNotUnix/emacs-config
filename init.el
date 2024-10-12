@@ -4,6 +4,8 @@
 ;; Configura CUA-mode (C-c para copy, C-x para cut...)
 (cua-mode t)
 
+(add-hook 'text-mode-hook 'visual-line-mode)
+
 (require 'package)
 (setq package-archives '(("melpa" . "https://melpa.org/packages/")))
 (package-initialize)
@@ -15,3 +17,5 @@
 
 (require 'use-package)
 (setq use-package-always-ensure t)
+
+(load-theme 'catppuccin :no-confirm)
